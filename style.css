@@ -48,6 +48,7 @@ License: Same license as html5boilerplate.com
 html {
     font-size: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -63,7 +64,7 @@ input,
 select,
 textarea {
     font-family: sans-serif;
-    color: #222;
+    color: #222222;
 }
 
 
@@ -75,12 +76,13 @@ textarea {
 
 ::-moz-selection { 
     background: #fe57a1;
-    color: #fff;
+    color: #ffffff;
     text-shadow: none;
 }
 ::selection {
     background: #fe57a1;
-    color: #fff; text-shadow: none;
+    color: #ffffff;
+    text-shadow: none;
 }
 
 
@@ -117,7 +119,7 @@ audio:not([controls]) {
 ----------------------------------------------- */
 
 a {
-    color: #00e;
+    color: #0000ee;
 }
 a:visited {
     color: #551a8b;
@@ -154,18 +156,18 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cccccc;
     margin: 1em 0;
     padding: 0;
 }
 ins {
-    background: #ff9;
-    color: #000;
+    background: #ffff99;
+    color: #000000;
     text-decoration: none;
 }
 mark {
-    background: #ff0;
-    color: #000;
+    background: #ffff00;
+    color: #000000;
     font-style: italic;
     font-weight: bold;
 }
@@ -231,6 +233,7 @@ dd {
 nav ul,
 nav ol {
     list-style: none;
+    list-style-image: none;
     margin: 0;
     padding: 0;
 }
@@ -355,9 +358,13 @@ input[type="radio"] {
     box-sizing: border-box;
 }
 input[type="search"] {
+    -webkit-appearance: textfield;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
 }
 
 
@@ -570,7 +577,7 @@ table {
     }
     pre,
     blockquote {
-        border: 1px solid #999;
+        border: 1px solid #999999;
         page-break-inside: avoid;
     }
     thead {
