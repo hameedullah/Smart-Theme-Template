@@ -1,5 +1,5 @@
 Smart Theme Template
-A bare bone theme template that is smart enough to let the developer do his work without getting into developer's way. This is just the template, but a smart one at least for me ;).
+A bare bone WordPress theme template that is smart enough to let the developer do his work without getting into developer's way. This is just the template, but a smart one at least for me ;).
 
 The version of the html5boilerplate being used for this template is included as gitmodule.
 
