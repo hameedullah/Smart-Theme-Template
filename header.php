@@ -35,6 +35,13 @@
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/modernizr-2.0.6.min.js"></script>
+	<?php 
+		/*
+		 * The wp_head call is required, so plugins can get the chance to load their stuff
+		 * inot HTML head
+		 */
+		wp_head(); 
+	?>
 </head>
 
 <body>
