@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-	<div id="main" role="main">
+	<div id="content" role="main">
 		<article id="post-0">
 			<header>
 				<h1>Not found <span frown>:(</span></h1>
@@ -27,6 +27,6 @@ get_header();
 			</script>
 			<script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
 		</article><!-- #post-0 -->
-	</div><!-- #main -->
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

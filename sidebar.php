@@ -4,7 +4,7 @@
  */
 ?>
 
-	<div id="right-sidebar" class="widget-area" rol="complementary">
+	<div id="sidebar" class="widget-area" rol="complementary">
 		<?php if ( ! dynamic_sidebar( 'right-sidebar' ) ) : ?>
 
 			<aside id="archives" class="widget">
@@ -23,4 +23,4 @@
 				</ul>
 			</aside>
 		<?php endif; // End if dynamic_sidebar right-sidebar?>
-	</div><!-- #right-sidebar .widget-area -->
+	</div><!-- #sidebar .widget-area -->

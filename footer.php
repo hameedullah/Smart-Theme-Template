@@ -3,10 +3,11 @@
  * Smart Theme Footer Template
  */
 ?>
+	</div><!-- #main -->
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
+  </div> <!-- #container -->
 
 
   <!-- JavaScript at the bottom for fast page loading -->

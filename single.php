@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-	<div id="main" role="main">
+	<div id="content" role="main">
 		
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -21,6 +21,6 @@ get_header(); ?>
 
 		<?php endwhile; // End of while have_posts ?>
 
-	</div><!-- #main -->
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

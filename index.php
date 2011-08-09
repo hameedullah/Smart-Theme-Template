@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-    <div id="main" role="main">
+    <div id="content" role="main">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -30,7 +30,7 @@ get_header(); ?>
 	
 	<?php endif; ?>
 
-    </div><!-- #main -->
+    </div><!-- #content -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
