@@ -34,29 +34,24 @@ License: Same license as html5boilerplate.com
 
 /* =Reset: Base
 ----------------------------------------------- */
-
 /*
  * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
  * http://clagnut.com/blog/348/#c790
  * 2. Force vertical scrollbar in non-IE
- * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
  * www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
- * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom
  * www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-
 html {
     font-size: 100%;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 body {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.231;
+    font-size: 1em;
+    line-height: 1.4;
 }
 body,
 button,
@@ -67,13 +62,11 @@ textarea {
     color: #222222;
 }
 
-
 /*
  * These selection declarations have to be separate
  * No text-shadow: twitter.com/miketaylr/status/12228805301
  * Also: hot pink!
  */
-
 ::-moz-selection { 
     background: #fe57a1;
     color: #ffffff;
@@ -88,9 +81,7 @@ textarea {
 
 /* =Reset: Display
 ----------------------------------------------- */
-
 /* HTML5 display Definitions */
-
 article,
 aside,
 details,
@@ -113,21 +104,25 @@ video {
 audio:not([controls]) {
     display: none;
 }
+[hidden] { 
+    display: none;
+}
 
 
 /* =Reset: Links
 ----------------------------------------------- */
-
 a {
     color: #0000ee;
 }
 a:visited {
     color: #551a8b;
 }
+a:hover {
+    color: #0066ee;
+}
 a:focus {
     outline: thin dotted;
 }
-
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover,
@@ -138,7 +133,6 @@ a:active {
 
 /* =Reset: Typography
 ----------------------------------------------- */
-
 abbr[title] {
     border-bottom: 1px dotted;
 }
@@ -172,17 +166,15 @@ mark {
     font-weight: bold;
 }
 
-
 /* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
 pre,
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-family: monospace, serif;
     _font-family: 'courier new', monospace;
     font-size: 1em;
 }
-
 
 /* Improve readability of pre-formatted text in all browsers */
 pre {
@@ -202,7 +194,6 @@ small {
     font-size: 85%;
 }
 
-
 /* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
 sub,
 sup {
@@ -221,7 +212,6 @@ sub {
 
 /* =Reset: Lists
 ----------------------------------------------- */
-
 ul,
 ol {
     margin: 1em 0;
@@ -241,23 +231,19 @@ nav ol {
 
 /* =Reset: Embedded content
 ----------------------------------------------- */
-
 /*
  * 1. Improve image quality when scaled in IE7 http://h5bp.com/d
  * 2. Remove the gap between images and borders on image containers http://h5bp.com/e
  */
-
 img {
     border: 0;
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
 }
 
-
 /*
  * Correct overflow displayed oddly in IE9
  */
-
 svg:not(:root) {
     overflow: hidden;
 }
@@ -265,7 +251,6 @@ svg:not(:root) {
 
 /* =Reset: Figures
 ----------------------------------------------- */
-
 figure {
     margin: 0;
 }
@@ -273,7 +258,6 @@ figure {
 
 /* =Reset: Forms
 ----------------------------------------------- */
-
 form {
     margin: 0;
 }
@@ -283,12 +267,10 @@ fieldset {
     padding: 0;
 }
 
-
 /* Indicate that 'label' will shift focus to the associated form element */
 label {
     cursor: pointer;
 }
-
 
 /*
  * 1. Correct color not inheriting in IE6/7/8/9
@@ -299,7 +281,6 @@ legend {
     *margin-left: -7px;
     padding: 0;
 }
-
 
 /*
  * 1. Correct font-size not inheriting in all browsers
@@ -316,7 +297,6 @@ textarea {
     *vertical-align: middle;
 }
 
-
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
  * 2. Correct inner spacing displayed oddly in IE6/7
@@ -324,22 +304,12 @@ textarea {
 button,
 input {
     line-height: normal;
-    *overflow: visible;
 }
-
-
-/*
- * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
- */
-table button,
-table input {
-    *overflow: auto;
-}
-
 
 /*
  * 1. Display hand cursor for clickable form elements
  * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
  */
 button,
 input[type="button"],
@@ -347,8 +317,8 @@ input[type="reset"],
 input[type="submit"] {
     cursor: pointer;
     -webkit-appearance: button;
+    *overflow: visible;
 }
-
 
 /*
  * Consistent box sizing and appearance
@@ -356,6 +326,7 @@ input[type="submit"] {
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box;
+    padding: 0;
 }
 input[type="search"] {
     -webkit-appearance: textfield;
@@ -367,7 +338,6 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-
 /*
  * Remove inner padding and border in FF3/4
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
@@ -377,7 +347,6 @@ input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
-
 
 /*
  * 1. Remove default vertical scrollbar in IE6/7/8/9
@@ -389,7 +358,6 @@ textarea {
     resize: vertical;
 }
 
-
 /* Colors for form validity */
 input:valid, textarea:valid { }
 input:invalid,
@@ -400,10 +368,12 @@ textarea:invalid {
 
 /* =Reset: Tables
 ----------------------------------------------- */
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+td {
+    vertical-align: top;
 }
 
 /* End of Section =Reset */
@@ -437,6 +407,23 @@ table {
 ----------------------------------------------- */
 
 
+/* =Media Queries
+----------------------------------------------- */
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
 /************************************************** 
  * Please define your styles before this section. *
  **************************************************/
@@ -444,11 +431,9 @@ table {
 
 /* =Classes
 ----------------------------------------------- */
-
 /*
  * Non-semantic helper classes
  */
-
 /* For image replacement */
 .ir {
     display: block;
@@ -459,22 +444,17 @@ table {
     background-repeat: no-repeat;
     text-align: left;
     direction: ltr;
+    *line-height: 0;
 }
 .ir br {
     display: none;
 }
 
-
 /* Hide for both screenreaders and browsers: css-discuss.incutio.com/wiki/Screenreader_Visibility */
-[hidden] {
-    display: none;
-    visibility: hidden;
-}
 .hidden {
-    display: none;
+    display: none !important;
     visibility: hidden;
 }
-
 
 /* 
  * Hide only visually, but have it available for screenreaders: by Jon Neal.
@@ -491,7 +471,6 @@ table {
     width: 1px;
 }
 
-
 /*
  * Extends the .visuallyhidden class to allow the element to
  * be focusable when navigated to via the keyboard: drupal.org/node/897638 
@@ -506,12 +485,10 @@ table {
     width: auto;
 }
 
-
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
     visibility: hidden;
 }
-
 
 /* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
@@ -523,38 +500,18 @@ table {
     clear: both;
 }
 .clearfix {
-    zoom: 1;
-}
-
-
-/* =Media
------------------------------------------------ */
-
-/*
- * PLACEHOLDER Media Queries for Responsive Design.
- * These override the primary ('mobile first') styles
- * Modify as content requires.
- */
-
-@media only screen and (min-width: 480px) {
-    /* Style adjustments for viewports 480px and over go here */
-
-}
-
-@media only screen and (min-width: 768px) {
-    /* Style adjustments for viewports 768px and over go here */
-
+    *zoom: 1;
 }
 
 
 /* =Print
 ----------------------------------------------- */
- 
 /* Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ */
 @media print {
     * {
         background: transparent !important;
         color: black !important; /* Black prints faster: sanbeiji.com/archives/953 */
+        box-shadow: none !important;
         text-shadow: none !important;
         filter:none !important;
         -ms-filter: none !important;
